@@ -5,6 +5,12 @@ The current example is done with the first version of Streamr's client so we hav
 
 You also have to do imports for some of the dependencies required by Streamr. you can find the required dependencies in the build.sbt file.
 
+Before running spark you first need to create a .jar file of the project with:
+
+```
+sbt package
+```
+
 Even though Apache Spark is now able to resolve most of the dependencies, you still need to tell Spark to load a few dependencies seen in the start up script:
 
 ```
@@ -41,6 +47,11 @@ The tmp directory is where the integration script pushes new json files after a 
 
 ### Running
 First start up the node.js integration script. After this you should spark-submit the `StreamrSparkFileStreaming` class as follows:
+
+```
+sbt package
+```
+
 ```
 spark-submit --master local[4] --class StreamrSparkFileStreaming target/scala-2.11/scala-spark_2.11-0.1.jar
 ````
@@ -55,7 +66,12 @@ You can also use Apache NiFi and Kafka to set up a pipeline from streamr with St
 
 After you have installed [NiFi](https://nifi.apache.org/) + Streamr processors you should install and set up [Apache Kafka](https://kafka.apache.org/) you should import the nififlow.xml file to Apache NiFi. From there you should configure the Streamr and Kafka processors. After the processors are configured you should configure the spark main class to subscribe and publish to the streams and topics you have set up. See the [KafkaStreamrSpark](./src/main/scala/KafkaStreamrSpark.scala) class for an example.
 
-After everything is set up you can try to start up spark with:
+After everything is set up and you can try to start up spark with first:
+```
+sbt package
+```
+
+and then
 
 ```
 spark-submit --master local[4] --class KafkaStreamrSpark --packages org.apache.spark:spark-sql-kafka-0-10:2.4.1 target/scala-2.11/scala-spark_2.11-0.1.jar

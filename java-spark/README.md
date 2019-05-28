@@ -13,6 +13,11 @@ You also have to include these dependencies to the pom.xml file. Some extra impo
 
 If you shade the .jar file as is done in this example you can leave the --packages configuration out. You can also leave out most dependencies reuired by Streamr's client. See the pom.xml file of this project to see the required dependencies and plugins for the shaded .jar.
 
+The package the .jar file with: 
+```
+mvn package
+```
+And then run Spark with:
 ```
 spark-submit --master local[4] --class Streamrspark Streamrspark-1.0-SNAPSHOT.jar
 ```
