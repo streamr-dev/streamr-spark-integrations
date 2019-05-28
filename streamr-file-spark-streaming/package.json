@@ -1,0 +1,16 @@
+{
+  "name": "streamr-file-spark-streaming",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santeri Juslenius",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "rimraf": "^2.6.3",
+    "streamr-client": "^2.0.0-beta.9"
+  }
+}
