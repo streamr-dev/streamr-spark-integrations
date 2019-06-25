@@ -16,7 +16,7 @@ import org.apache.spark.streaming.api.java.*;
         JavaDStream<String> filtered = streamrReceiverStream.filter(new Function<String, Boolean>() {
             @Override
             public Boolean call(String s) throws Exception {
-                return s.contains("6T");
+                return s.contains("6");
             }
         });
         filtered.count().print();

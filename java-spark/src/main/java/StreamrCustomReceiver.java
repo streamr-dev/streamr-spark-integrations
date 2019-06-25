@@ -5,6 +5,7 @@ import org.apache.spark.streaming.receiver.Receiver;
 import com.streamr.client.StreamrClient;
 import com.streamr.client.Subscription;
 import com.streamr.client.authentication.ApiKeyAuthenticationMethod;
+import com.streamr.client.authentication.AuthenticationMethod;
 import com.streamr.client.MessageHandler;
 import com.streamr.client.protocol.message_layer.StreamMessage;
 import com.streamr.client.rest.Stream;

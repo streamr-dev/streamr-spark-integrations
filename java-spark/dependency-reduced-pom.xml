@@ -65,62 +65,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.apache.spark</groupId>
-      <artifactId>spark-sql_2.12</artifactId>
-      <version>2.4.1</version>
-      <scope>provided</scope>
-      <exclusions>
-        <exclusion>
-          <artifactId>univocity-parsers</artifactId>
-          <groupId>com.univocity</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spark-sketch_2.12</artifactId>
-          <groupId>org.apache.spark</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spark-catalyst_2.12</artifactId>
-          <groupId>org.apache.spark</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>orc-core</artifactId>
-          <groupId>org.apache.orc</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>orc-mapreduce</artifactId>
-          <groupId>org.apache.orc</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>parquet-column</artifactId>
-          <groupId>org.apache.parquet</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>parquet-hadoop</artifactId>
-          <groupId>org.apache.parquet</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>arrow-vector</artifactId>
-          <groupId>org.apache.arrow</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>xbean-asm6-shaded</artifactId>
-          <groupId>org.apache.xbean</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spark-core_2.12</artifactId>
-          <groupId>org.apache.spark</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spark-tags_2.12</artifactId>
-          <groupId>org.apache.spark</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>unused</artifactId>
-          <groupId>org.spark-project.spark</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
   </dependencies>
 </project>
 

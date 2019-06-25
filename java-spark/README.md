@@ -5,7 +5,7 @@ Example integration directly from Streamr's Java client to Apache Spark Streamin
 Streamr's first version of the Java client requires some extra configuration with the dependecies before you can run the integration. You can either use Maven Shade to get all the dependencies in a single .jar file that is easy to run but might lower your run time performance, or specify the required imports for Spark in your submit script.
 
 ```
-spark-submit --master local[4] --class Streamrspark --packages com.streamr:client:1.0.0,org.apache.logging.log4j:log4j-core:2.9.0,org.apache.logging.log4j:log4j-api:2.9.0,org.apache.logging.log4j:log4j-slf4j-impl:2.9.0 target/Streamrspark-1.0-SNAPSHOT.jar
+spark-submit --master local[4] --class Streamrspark --packages com.streamr:client:1.1.0,org.apache.logging.log4j:log4j-core:2.9.0,org.apache.logging.log4j:log4j-api:2.9.0,org.apache.logging.log4j:log4j-slf4j-impl:2.9.0 target/Streamrspark-1.0-SNAPSHOT.jar
 ```
 
 You also have to include these dependencies to the pom.xml file. Some extra imports might also be required, you can see the required imports in the Scala projects [build.sbt](../scala-spark/build.sbt) file. Just import the dependecies in your projects pom.xml file
