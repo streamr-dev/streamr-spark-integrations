@@ -9,7 +9,7 @@ object StreamrSparkStreamingSQL {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("StreamrSparkStreamingSQL")
     val ssc = new StreamingContext(conf, Seconds(5))
-    val streamrReceiver: DStream[String] = ssc.receiverStream(new StreamrCustomReceiver("Hb35dKItSxeJI9VSOPBLLAiF6EHACZQqGZo8mwKf3gJw", "7wa7APtlTq6EC5iTCBy6dw"))
+    val streamrReceiver: DStream[String] = ssc.receiverStream(new StreamrCustomReceiver("YOUR_STREAMR_API_KEY", "YOUR_STREAM_ID"))
     // Schema for the Streamr marketplace Helsinki Tram Stream
     val schema = new StructType()
         .add("desi", StringType)
