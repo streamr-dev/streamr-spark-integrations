@@ -14,7 +14,7 @@ sbt package
 Even though Apache Spark is now able to resolve most of the dependencies, you still need to tell Spark to load a few dependencies seen in the start up script:
 
 ```
-spark-submit --master local[4] --class StreamrSparkStreamingSQL --packages com.streamr:client:1.0.0,org.apache.logging.log4j:log4j-core:2.9.0,org.apache.logging.log4j:log4j-api:2.9.0,org.apache.logging.log4j:log4j-slf4j-impl:2.9.0 target/scala-2.11/scala-spark_2.11-0.1.jar
+spark-submit --master local[4] --class StreamrSparkStreamingSQL --packages com.streamr:client:1.1.0,org.apache.logging.log4j:log4j-core:2.9.0,org.apache.logging.log4j:log4j-api:2.9.0,org.apache.logging.log4j:log4j-slf4j-impl:2.9.0 target/scala-2.11/scala-spark_2.11-0.1.jar
 ```
 
 Alternatively you could set up assembly for your project to create a large .jar file of the project. However the large .jar file might reduce your run time performance, where as the manual imports only slow down your start up time.
