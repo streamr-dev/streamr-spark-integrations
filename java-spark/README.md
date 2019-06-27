@@ -2,7 +2,7 @@
 
 Example integration directly from Streamr's Java client to Apache Spark Streaming.
 
-Streamr's first version of the Java client requires some extra configuration with the dependecies before you can run the integration. You can either use Maven Shade to get all the dependencies in a single .jar file that is easy to run but might lower your run time performance, or specify the required imports for Spark in your submit script.
+Streamr's first version of the Java client requires some extra configuration with the dependencies before you can run the integration. You can use Maven Shade to get all the dependencies in a single .jar file that is easy to run but might lower your run time performance. Alternatively you can specify the required imports for Spark in your submit script.
 
 ```
 spark-submit --master local[4] --class Streamrspark --packages com.streamr:client:1.1.0,org.apache.logging.log4j:log4j-core:2.9.0,org.apache.logging.log4j:log4j-api:2.9.0,org.apache.logging.log4j:log4j-slf4j-impl:2.9.0 target/Streamrspark-1.0-SNAPSHOT.jar
@@ -36,6 +36,6 @@ This is how you integrate the StreamrCustomReceiver to Sparks executor. Streamr 
     jssc.receiverStream(new StreamrCustomReceiver("YOUR_STREAMR_API_KEY","YOUR_STREAM_ID"));
 ```
 
-The data is ingested in a String JSON format. In the example code you can see how to do some filtering of the data. However you should propably set up an SQLContext to process the data as JSON. 
+The data is ingested in a String JSON format. In the example code you can see how to do some filtering of the data. However you propably should set up an SQLContext to process the data in JSON format instead of raw text. 
 
 I would recommend using [Scala](../scala-spark) when playing around with the JSON data, and using Scala over Java with Apache Spark in general.
