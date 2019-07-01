@@ -1,7 +1,7 @@
-# Streamr integrations with Scala to Spark SQL / Structured streaming via kafka and file streaming
+# Streamr integrations in Scala to Spark Streaming, Spark SQL and Structured streaming via kafka and file streaming
 
 ## Direct integrations
-The current example is done with the first version of Streamr's client so we have to work around with some issues still present. Firstly, SBT is unable to download the library from maven so you have to make a /lib directory and put the Streamr client's .jar file inside it. The .jar file can be found inside this project's /lib directory. For some IDE's such as Intellij IDEA you also need to specify .jar dependency in the project settings.
+The current example is done with the first version of Streamr's client so we have to work around with some issues still present. Firstly, SBT is unable to download the library from maven so you have to make a /lib directory and put the Streamr client's .jar file inside it. The .jar file can be found inside this project's /lib directory. For some IDE's such as Intellij IDEA you also need to specify .jar dependency in the project settings. You also need to do this for SBT before you package the source code in to a .jar file.
 
 Before running spark you first need to create a .jar file of the project with:
 
@@ -19,7 +19,7 @@ Alternatively you could set up Assembly for your project to create a large .jar 
 
 ## Non-direct integrations
 
-This repository also includes some example integrations for setting up non-direct integrations to Streamr.
+This repository also includes some example integrations for setting up non-direct integrations to Streamr. These non direct examples would mostly be used for publishing data back to Streamr as publishing with the Streamr Java client is not possible with Spark. 
 
 You can use the [Node.js integration tool](../streamr-file-spark-streaming) to pull historical data from a stream. For kafka you can set up an integration script from Streamr to Kafka or use NiFi to create a Streamr - NiFi - Kafka - Spark - and/or back pipeline.
 
