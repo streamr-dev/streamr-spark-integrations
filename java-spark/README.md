@@ -8,7 +8,7 @@ Streamr's first version of the Java client requires some extra configuration wit
 spark-submit --master local[4] --class Streamrspark --packages com.streamr:client:1.1.0,org.apache.logging.log4j:log4j-core:2.9.0,org.apache.logging.log4j:log4j-api:2.9.0,org.apache.logging.log4j:log4j-slf4j-impl:2.9.0 target/Streamrspark-1.0-SNAPSHOT.jar
 ```
 
-You also have to include these dependencies to the pom.xml file. Some extra imports might also be required, you can see the required imports in the Scala projects [build.sbt](../scala-spark/build.sbt) file. Just import the dependecies in your projects pom.xml file
+You might also need to add some of these dependencies to your pom.xml file for your IDE and Maven before packaging the .jar file.
 
 
 If you shade the .jar file as is done in this example you can leave the --packages configuration out. You can also leave out most dependencies reuired by Streamr's client. See the pom.xml file of this project to see the required dependencies and plugins for the shaded .jar.
@@ -26,7 +26,7 @@ If you do not shade the .jar you also need to specify some imports required by [
 
 # Usage
 
-This is how you integrate the StreamrCustomReceiver to Sparks executor. Streamr API key and Stream ID can be found in [Streamr's editor](https://www.streamr.com/core) after you have created an account and a stream.
+This is how you integrate the StreamrCustomReceiver to Spark's executor. Streamr API key and Stream ID can be found in [Streamr's editor](https://www.streamr.com/core) after you have created an account and a stream.
 
 ``` java
  SparkConf conf = new SparkConf();
