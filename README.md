@@ -1,6 +1,6 @@
 # Apache spark integrations from Streamr
 
-You can find the maven library for the integration here [here](https://github.com/streamr-dev/streamr-spark)
+You can find the maven library for the integration [here](https://github.com/streamr-dev/streamr-spark)
 You can import it to your maven project easily with:
 
 ```
